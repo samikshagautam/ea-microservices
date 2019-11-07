@@ -13,6 +13,9 @@ public class ShippingAddress {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @Column(name = "account_id")
+    private Long accountId;
+
     @Column(name = "address1")
     private String address1;
 

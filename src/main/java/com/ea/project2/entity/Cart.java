@@ -14,9 +14,20 @@ public class Cart {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Transient
-    private List<CartItem> cartItems;
+    @Column(name = "account_id")
+    private Long accountId;
 
-    @Column(name = "shipping_cost")
-    private Double shippingCost;
+    @Column(name = "product_id")
+    private Long productId;
+
+    @Column(name = "quantity")
+    private int quantity;
+
+    @Column(name = "rate")
+    private Double rate;
+
+    @Column(name = "price")
+    private Double price;
+
+
 }

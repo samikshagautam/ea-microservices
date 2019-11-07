@@ -5,8 +5,6 @@ import com.ea.project2.repository.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.validation.constraints.Email;
-
 @Service
 public class AccountService {
 
@@ -26,7 +24,6 @@ public class AccountService {
         return accountRepository.save(account);
     }
 
-
     public Account getByEmail(String email) {
         return accountRepository.findByEmail(email);
     }
@@ -34,7 +31,6 @@ public class AccountService {
     public Account getById(Long id) {
         return accountRepository.findById(id).get();
     }
-
 
     public Account updateAccount(Account postData, Long id) throws Exception {
         Account account = getById(id);
@@ -60,6 +56,4 @@ public class AccountService {
         accountRepository.delete(account);
         return account;
     }
-
-
 }

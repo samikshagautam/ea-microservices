@@ -26,9 +26,6 @@ public class Order {
     @Column(name = "shipping_cost")
     private Double shippingCost;
 
-    @Column(name = "tax")
-    private Double tax;
-
     @Column(name = "order_total")
     private Double orderTotal;
 

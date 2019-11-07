@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class CategoryService {
-
     @Autowired
     private CategoryRepository categoryRepository;
 
@@ -45,7 +44,4 @@ public class CategoryService {
         categoryRepository.delete(category);
         return category;
     }
-
 }
-
-
