@@ -20,6 +20,9 @@ public class Order {
     @Column(name = "address_id")
     private Long addressId;
 
+    @Column(name = "account_id")
+    private Long accountId;
+
     @Column(name = "sub_total")
     private Double subTotal;
 
@@ -29,9 +32,8 @@ public class Order {
     @Column(name = "order_total")
     private Double orderTotal;
 
-
-
-
+    @Column(name = "payment_type")
+    private String paymentType;
 
 
 }

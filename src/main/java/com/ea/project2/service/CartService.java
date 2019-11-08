@@ -54,7 +54,18 @@ public class CartService {
         return cartRepository.save(cart);
     }
 
-    public List<Cart> getCart(Long userId){
+    public List<Cart> getCart(Long userId) {
         return cartRepository.findByAccountId(userId);
     }
+
+    //calculate cart total
+    public double getCartTotal(Long userId) {
+        List<Cart> carts = getCart(userId);
+        double total = 0;
+        for (Cart cart : carts) {
+            total += cart.getPrice();
+        }
+        return total;
+    }
+
 }
