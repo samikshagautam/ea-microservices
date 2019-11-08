@@ -5,6 +5,8 @@ import com.ea.project2.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/categories")
 public class CategoryController {
@@ -31,4 +33,6 @@ public class CategoryController {
     public Category deleteCategory(@PathVariable("id") Long id) throws Exception {
         return categoryService.deleteCategory(id);
     }
+
+
 }
