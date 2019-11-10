@@ -35,5 +35,9 @@ public class Order {
     @Column(name = "payment_type")
     private String paymentType;
 
+    @Column(name = "status")
+    private OrderStatus status;
+
+
 
 }
